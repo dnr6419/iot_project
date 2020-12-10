@@ -1,0 +1,30 @@
+{% extends 'base/base.html' %}
+{% block content %}
+<h5>scan results.</h5>
+  <div class="table-wrapper">
+    <table class="alt">
+      <thead>
+        <tr>
+          <th>ip 주소</th>
+          <th>포트</th>
+          <th>기기</th>
+          <th>스캔한 날짜</th>
+        </tr>
+      </thead>
+      <tbody>
+        {% for scan in scans %}
+        <tr>
+          <td>{{scan.ip}}</td>
+          <td>{{scan.port}}</td>
+          <td>{{scan.device}}</td>
+          <td>{{scan.cdate}}</td>
+        </tr>
+        {% endfor %}
+      </tbody>
+    </table>
+</div>
+<h1>Test</h1>
+{% if message %}
+{{message}}
+{% endif %}
+{% endblock %}

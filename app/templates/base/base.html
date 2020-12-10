@@ -1,0 +1,69 @@
+{% load static %}
+<!DOCTYPE HTML>
+<!--
+	Projection by TEMPLATED
+	templated.co @templatedco
+	Released for free under the Creative Commons Attribution 3.0 license (templated.co/license)
+-->
+<html>
+	<head>
+        {% if title %}
+        <title>{{ title }}</title>
+        {% else %}
+        <title>Project IoT</title>
+        {% endif %}
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1" />
+		<link rel="stylesheet" href="{% static "assets/css/main.css" %}" />
+		<link rel="preconnect" href="https://fonts.gstatic.com">
+        <link href="https://fonts.googleapis.com/css2?family=Anton&display=swap" rel="stylesheet">  
+	</head>
+	<body>
+
+<!-- Header -->
+    <header id="header">
+        <div class="inner">    
+            <nav id="nav">
+                <a href="/"><img class='logo' src='/static/images/logo.png'></a>
+                <a href="/">Home</a>
+                <a href="/upload">FirmwareAnalysis</a>
+                <a href="/scan/">NetScan</a>
+                <a href="/settings/">Settings</a>
+            </nav>
+            <a href="#navPanel" class="navPanelToggle"><span class="fa fa-bars"></span></a>
+        </div>
+      </header>
+    
+<!-- Main -->
+    <section id="main" class="wrapper">
+        <hr class="major">
+        <div class="inner">
+        {% block content %}
+        {% endblock %}
+        </div>
+    </section>
+
+<!-- Footer -->
+<footer id="footer">
+    <div class="inner">
+        <div style="float:right;">
+            <img src="/static/images/kitri_logo_Ko.png" height="50px"/>
+        </div>
+        <div class="copyright" style="clear: both;">
+            made by 권순현, 오지은, 임재연, 장재윤, 주형욱
+            <br>
+            contact: https://www.kitribob.kr/
+            <br>
+            &copy; Untitled. Design: <a href="https://templated.co">TEMPLATED</a>. Images: <a href="https://unsplash.com">Unsplash</a>.
+        </div>
+    </div>
+</footer>
+
+<!-- Scripts -->
+    <script src="/static/assets/js/jquery.min.js"></script>
+    <script src="/static/assets/js/skel.min.js"></script>
+    <script src="/static/assets/js/util.js"></script>
+    <script src="/static/assets/js/main.js"></script>
+
+</body>
+</html>
